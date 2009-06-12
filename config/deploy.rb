@@ -1,15 +1,37 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "iphonetypos.com"
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
+server "iphonetypos.com", :app, :web, :db, :primary => true
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
-# set :scm, :subversion
+set :deploy_to,   "/home/paul/public_html/iphonetypos.com/rails_app"
 
-role :app, "your app-server here"
-role :web, "your web-server here"
-role :db,  "your db-server here", :primary => true
+set :use_sudo,    false
+
+set :scm, :git
+set :branch, "master"
+set :deploy_via, :remote_cache
+set :scm_verbose, true
+set :git_enable_submodules, 1
+set :repository,  "git@github.com:kalupa/iPhone-Typos.git"
+
+namespace :deploy do
+  task :start, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+
+  task :stop, :roles => :app do
+    # Do nothing.
+  end
+
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+end
+
+namespace :gems do
+  desc "Install gems"
+  task :install, :roles => :app do
+    run "cd #{current_path} && rake RAILS_ENV=production gems:install"
+  end
+end
+
