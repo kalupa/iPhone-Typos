@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+	map.resources :typos
+
+	map.root :controller => "typos"
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

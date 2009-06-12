@@ -1,0 +1,20 @@
+<h1>Editing typo</h1>
+
+<% form_for(@typo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :typo %><br />
+    <%= f.text_field :typo %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @typo %> |
+<%= link_to 'Back', typos_path %>

@@ -1,0 +1,7 @@
+<h1>iPhone Typos</h1>
+
+<% @typos.each do |typo| %>
+	<%= simple_format(typo.html) %>
+<% end %>
+
+<%= link_to 'New typo', new_typo_path %>
