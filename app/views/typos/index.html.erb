@@ -2,6 +2,7 @@
 
 <% @typos.each do |typo| %>
 	<%= simple_format(typo.html) %>
+	<hr />
 <% end %>
 
 <%= link_to 'New typo', new_typo_path %>

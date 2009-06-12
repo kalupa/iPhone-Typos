@@ -197,3 +197,10 @@ Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:14:47) [GET]
 Rendering template within layouts/typos
 Rendering typos/index
 Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:37:38) [GET]
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/]
