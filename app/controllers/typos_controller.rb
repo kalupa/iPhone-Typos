@@ -45,7 +45,7 @@ class TyposController < ApplicationController
     respond_to do |format|
       if @typo.save
         flash[:notice] = 'Typo was successfully created.'
-        format.html { redirect_to(@typo) }
+        format.html { redirect_to typos_path }
         format.xml  { render :xml => @typo, :status => :created, :location => @typo }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class TyposController < ApplicationController
     respond_to do |format|
       if @typo.update_attributes(params[:typo])
         flash[:notice] = 'Typo was successfully updated.'
-        format.html { redirect_to(@typo) }
+        format.html { redirect_to typos_path }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

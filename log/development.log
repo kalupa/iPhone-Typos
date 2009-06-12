@@ -144,3 +144,56 @@ Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:07:54) [GET]
 Rendering template within layouts/typos
 Rendering typos/index
 Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-12 11:14:12) [GET]
+Rendering template within layouts/typos
+Rendering typos/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#create (for 127.0.0.1 at 2009-06-12 11:14:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"pvsFU1DFxkVsX3v7rzxq8IJZ9iuZSZMBrQAZKtOeK58=", "typo"=>{"name"=>"P", "html"=>"For that special test (wink)...\r\n\r\nSee you as Sion as possible.\r\n\r\nInvade I haven't told you all lately, thank you for all the work you do."}}
+  [4;35;1mTypo Create (19.6ms)[0m   [0mINSERT INTO "typos" ("html", "name", "updated_at", "created_at") VALUES('For that special test (wink)...
+
+See you as Sion as possible.
+
+Invade I haven''t told you all lately, thank you for all the work you do.', 'P', '2009-06-12 15:14:16', '2009-06-12 15:14:16')[0m
+Redirected to http://localhost:3000/typos/1
+Completed in 74ms (DB: 20) | 302 Found [http://localhost/typos]
+
+
+Processing TyposController#show (for 127.0.0.1 at 2009-06-12 11:14:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTypo Load (0.2ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+Rendering template within layouts/typos
+Rendering typos/show
+
+ActionView::TemplateError (undefined method `typo' for #<Typo:0x2350050>) on line #3 of app/views/typos/show.html.erb:
+1: <p>
+2:   <b>Typo:</b>
+3:   <%=h @typo.typo %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/typos/show.html.erb:3
+    app/controllers/typos_controller.rb:18:in `show'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:14:46) [GET]
+  [4;35;1mTypo Load (0.3ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:14:47) [GET]
+  [4;36;1mTypo Load (0.3ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/typos]
