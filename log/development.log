@@ -137,3 +137,10 @@ Processing TyposController#new (for 127.0.0.1 at 2009-06-12 10:37:26) [GET]
 Rendering template within layouts/typos
 Rendering typos/new
 Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-12 11:07:54) [GET]
+  [4;36;1mTypo Load (0.3ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
