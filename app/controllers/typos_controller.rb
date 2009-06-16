@@ -10,6 +10,23 @@ class TyposController < ApplicationController
     end
   end
 
+	def rate
+		@typo = Typo.find(params[:id])
+		# @typo.rate_it(params[:rating], 0)
+		
+		respond_to do |format|
+			if @typo.save
+				flash[:notice] = 'Typo was rated.'
+				format.html { redirect_to typos_path }
+				# format.xml  { render :xml => @typo, :status => :created, :location => @typo }
+			else
+				flash[:notice] = 'There was a problem rating the typo.'
+				format.html { redirect_to typos_path }
+				# format.xml  { render :xml => @typo.errors, :status => :unprocessable_entity }
+			end
+		end
+	end
+
   # GET /typos/1
   # GET /typos/1.xml
   def show
