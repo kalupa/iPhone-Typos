@@ -1,0 +1,19 @@
+%h1 New Typo
+
+- form_for(@typo) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :html, "Typo" 
+    %br/
+    = f.text_area :html
+  
+  %p
+    = f.label :name, "Your Name" 
+    %br/
+    = f.text_field :name
+  
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', typos_path
