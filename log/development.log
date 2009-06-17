@@ -1851,3 +1851,1353 @@ Processing TyposController#new (for 127.0.0.1 at 2009-06-16 22:21:25) [GET]
 Rendering template within layouts/typos
 Rendering typos/new
 Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-16 22:28:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:28:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.6ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:17: syntax error, unexpected kENSURE, expecting kEND
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:19: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+
+
+
+
+_hamlout.push_text("<div class='typo'>\n  <div class='typo_content'>", false, 2);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ";
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:17: syntax error, unexpected kENSURE, expecting kEND
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:19: syntax error, unexpected $end, expecting kEND) on line #17 of app/views/typos/index.html.haml:
+14: = link_to 'New typo', new_typo_path
+
+    app/views/typos/index.html.haml:19:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (98.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:28:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (undefined local variable or method `new_typo' for #<ActionView::Base:0x262125c>) on line #14 of app/views/typos/index.html.haml:
+11:       = link_to rating, :action => "rate", :id => typo, :rating => rating
+12:   %hr/
+13: 
+14: = link_to 'New typo', new_typo
+
+    app/views/typos/index.html.haml:14:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:28:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-16 22:28:59) [GET]
+  Parameters: {"rating"=>"4", "action"=>"rate", "id"=>"1", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.2ms)[0m   [0mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE "users" SET "perishable_token" = '2JyBDiWDFZdZ5FVqhLcN', "last_request_at" = '2009-06-17 02:29:00', "updated_at" = '2009-06-17 02:29:00' WHERE "id" = 1[0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT * FROM "rates" WHERE ("rates"."score" = 4) LIMIT 1[0m
+  [4;35;1mRate Exists (0.1ms)[0m   [0mSELECT "rates".id FROM "rates" WHERE ("rates"."score" = 4) LIMIT 1[0m
+  [4;36;1mRate Create (0.3ms)[0m   [0;1mINSERT INTO "rates" ("score") VALUES(4)[0m
+  [4;35;1mRating Exists (0.2ms)[0m   [0mSELECT "ratings".id FROM "ratings" WHERE ("ratings"."user_id" = 1 AND "ratings".rateable_id = 1 AND "ratings".rateable_type = 'Typo') LIMIT 1[0m
+  [4;36;1mRating Create (0.3ms)[0m   [0;1mINSERT INTO "ratings" ("updated_at", "rateable_type", "rate_id", "rateable_id", "user_id", "created_at") VALUES('2009-06-17 02:29:00', 'Typo', 3, 1, 1, '2009-06-17 02:29:00')[0m
+Redirected to http://localhost:3001/typos
+Completed in 262ms (DB: 2) | 302 Found [http://localhost/typo/1/rating/4]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:29:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-16 22:29:02) [GET]
+  Parameters: {"rating"=>"3", "action"=>"rate", "id"=>"1", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.2ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = '4K7ARJtOH0dhAtwsS7HI', "last_request_at" = '2009-06-17 02:29:02', "updated_at" = '2009-06-17 02:29:02' WHERE "id" = 1[0m
+  [4;35;1mRate Load (0.3ms)[0m   [0mSELECT * FROM "rates" WHERE ("rates"."score" = 3) LIMIT 1[0m
+  [4;36;1mRating Exists (0.2ms)[0m   [0;1mSELECT "ratings".id FROM "ratings" WHERE ("ratings"."user_id" = 1 AND "ratings".rateable_id = 1 AND "ratings".rateable_type = 'Typo') LIMIT 1[0m
+Redirected to http://localhost:3001/typos
+Completed in 29ms (DB: 2) | 302 Found [http://localhost/typo/1/rating/3]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:29:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-16 22:29:03) [GET]
+  Parameters: {"rating"=>"4", "action"=>"rate", "id"=>"1", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.2ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 's1xCkeoZmLPYRZwRH5xt', "last_request_at" = '2009-06-17 02:29:03', "updated_at" = '2009-06-17 02:29:03' WHERE "id" = 1[0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT * FROM "rates" WHERE ("rates"."score" = 4) LIMIT 1[0m
+  [4;36;1mRating Exists (0.2ms)[0m   [0;1mSELECT "ratings".id FROM "ratings" WHERE ("ratings"."user_id" = 1 AND "ratings".rateable_id = 1 AND "ratings".rateable_type = 'Typo') LIMIT 1[0m
+Redirected to http://localhost:3001/typos
+Completed in 28ms (DB: 2) | 302 Found [http://localhost/typo/1/rating/4]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:29:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-16 22:33:31) [GET]
+  Parameters: {"rating"=>"2", "action"=>"rate", "id"=>"1", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.3ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'yOBvu9Sk7Hc6oOfPmHIR', "last_request_at" = '2009-06-17 02:33:31', "updated_at" = '2009-06-17 02:33:31' WHERE "id" = 1[0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT * FROM "rates" WHERE ("rates"."score" = 2) LIMIT 1[0m
+  [4;36;1mRate Exists (0.1ms)[0m   [0;1mSELECT "rates".id FROM "rates" WHERE ("rates"."score" = 2) LIMIT 1[0m
+  [4;35;1mRate Create (0.3ms)[0m   [0mINSERT INTO "rates" ("score") VALUES(2)[0m
+  [4;36;1mRating Exists (0.4ms)[0m   [0;1mSELECT "ratings".id FROM "ratings" WHERE ("ratings"."user_id" = 1 AND "ratings".rateable_id = 1 AND "ratings".rateable_type = 'Typo') LIMIT 1[0m
+Redirected to http://localhost:3001/typos
+Completed in 93ms (DB: 2) | 302 Found [http://localhost/typo/1/rating/2]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:33:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:34:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:34:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.6ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected '=', expecting kEND
+...ml_temp = "Avg. rating:"     = typo.average_rating_round;
+                              ^
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+
+_hamlout.push_text("<div class='typo'>\n  <div class='rating'>", false, 2);haml_temp = "Avg. rating:"     = typo.average_rating_round;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);
+_hamlout.push_text("</div>\n  <br />\n  <div class='typo_content'>", true, 1);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ";
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);end;
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:18:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected '=', expecting kEND
+...ml_temp = "Avg. rating:"     = typo.average_rating_round;
+                              ^) on line #5 of app/views/typos/index.html.haml:
+2: 
+3: - @typos.each do |typo|
+4:   .typo 
+5:     .rating= "Avg. rating:"     = typo.average_rating_round 
+6:     %br/
+7:     .typo_content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+
+    app/views/typos/index.html.haml:18:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:34:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected tIDENTIFIER, expecting kEND
+...aml_temp = "Avg. rating:" typo.average_rating_round;
+                              ^
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+
+_hamlout.push_text("<div class='typo'>\n  <div class='rating'>", false, 2);haml_temp = "Avg. rating:" typo.average_rating_round;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);
+_hamlout.push_text("</div>\n  <br />\n  <div class='typo_content'>", true, 1);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ";
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);end;
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:18:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected tIDENTIFIER, expecting kEND
+...aml_temp = "Avg. rating:" typo.average_rating_round;
+                              ^) on line #5 of app/views/typos/index.html.haml:
+2: 
+3: - @typos.each do |typo|
+4:   .typo 
+5:     .rating= "Avg. rating:" typo.average_rating_round 
+6:     %br/
+7:     .typo_content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+
+    app/views/typos/index.html.haml:18:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (103.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:34:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:34:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-16 22:34:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:35:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:7: syntax error, unexpected ';'
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+
+_hamlout.push_text("<div class='typo'>\n  <div class='rating'>", false, 2);haml_temp = "Avg. rating:", typo.average_rating_round;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='typo_content'>", true, 1);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ",;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);end;
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:7: syntax error, unexpected ';') on line #7 of app/views/typos/index.html.haml:
+4:   .typo 
+5:     .rating= "Avg. rating:", typo.average_rating_round 
+6:     .typo_content= simple_format(typo.html)
+7:     .rate_it= "Rate it: ",
+8:     - 1.upto(4) do |rating|
+9:       = link_to rating, :action => "rate", :id => typo, :rating => rating
+10:   %hr/
+
+    app/views/typos/index.html.haml:17:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (101.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:35:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:36:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:37:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:37:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected '.'
+...;haml_temp = "Avg. rating:", .value= typo.average_rating_rou...
+                              ^
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+_hamlout.open_tag("div", false, false, false, false, {"class"=>"typo"}, false, false, [typo], nil);
+_hamlout.push_text("  <div class='rating'>", false, 1);haml_temp = "Avg. rating:", .value= typo.average_rating_round;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='content'>", true, 1);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ";
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);end;
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:17:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected '.'
+...;haml_temp = "Avg. rating:", .value= typo.average_rating_rou...
+                              ^) on line #5 of app/views/typos/index.html.haml:
+2: 
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:", .value= typo.average_rating_round 
+6:     .content= simple_format(typo.html)
+7:     .rate_it= "Rate it: "
+8:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:17:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:37:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:37:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (undefined local variable or method `span' for #<ActionView::Base:0x259b788>) on line #5 of app/views/typos/index.html.haml:
+2: 
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:" %span.value= typo.average_rating_round 
+6:     .content= simple_format(typo.html)
+7:     .rate_it= "Rate it: "
+8:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:5:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:3:in `each'
+    app/views/typos/index.html.haml:3:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:37:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+ERROR: compiling _run_haml_app47views47typos47index46html46haml RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: unknown type of %string
+...aml_temp = "Avg. rating:", %span.value= typo.average_rating_...
+                              ^
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected $end
+...aml_temp = "Avg. rating:", %span.value= typo.average_rating_...
+                              ^
+Function body:           def _run_haml_app47views47typos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>iPhone Typos</h1>\n"); @typos.each do |typo|;
+_hamlout.open_tag("div", false, false, false, false, {"class"=>"typo"}, false, false, [typo], nil);
+_hamlout.push_text("  <div class='rating'>", false, 1);haml_temp = "Avg. rating:", %span.value= typo.average_rating_round;
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='content'>", true, 1);haml_temp = simple_format(typo.html);
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n  <div class='rate_it'>", true, 1);haml_temp = "Rate it: ";
+haml_temp = _hamlout.push_script(haml_temp, nil, true, false, false, false);_hamlout.push_text("</div>\n", true); 1.upto(4) do |rating|;
+_hamlout.push_text("  ");haml_temp =  link_to rating, :action => "rate", :id => typo, :rating => rating;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);end;
+
+_hamlout.push_text("</div>\n<hr />\n", false, -1);end;haml_temp =  link_to 'New typo', new_typo_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/projects/iPhone-Typos/app/controllers/typos_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: unknown type of %string
+...aml_temp = "Avg. rating:", %span.value= typo.average_rating_...
+                              ^
+/Users/paul/projects/iPhone-Typos/app/views/typos/index.html.haml:5: syntax error, unexpected $end
+...aml_temp = "Avg. rating:", %span.value= typo.average_rating_...
+                              ^) on line #5 of app/views/typos/index.html.haml:
+2: 
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:", %span.value= typo.average_rating_round 
+6:     .content= simple_format(typo.html)
+7:     .rate_it= "Rate it: "
+8:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:5:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (98.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:38:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:"
+6:       %span.value= typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:39:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:"
+6:       %span.value = typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:39:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating= "Avg. rating:"
+6:       %span= typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:39:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:40:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #8 of app/views/typos/index.html.haml:
+5:     .rating= "Avg. rating:", typo.average_rating_round 
+6:     .content= simple_format(typo.html)
+7:     .rate_it= "Rate it: "
+8:       - 1.upto(4) do |rating|
+9:         = link_to rating, :action => "rate", :id => typo, :rating => rating
+10:   %hr/
+11: 
+
+    app/views/typos/index.html.haml:8
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:40:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:40:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:41:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating "Avg. rating: " 
+6:       %span.value= typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:41:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.6ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating Avg. rating:
+6:       %span.value= typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (106.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:42:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.6ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: content can't be both given on the same line as %div and nested within it.) on line #6 of app/views/typos/index.html.haml:
+3: - @typos.each do |typo|
+4:   .typo[typo]
+5:     .rating Avg. rating:
+6:       .value= typo.average_rating_round 
+7:     .content= simple_format(typo.html)
+8:     .rate_it= "Rate it: "
+9:     - 1.upto(4) do |rating|
+
+    app/views/typos/index.html.haml:6
+    haml (2.0.9) lib/haml/precompiler.rb:585:in `render_tag'
+    haml (2.0.9) lib/haml/precompiler.rb:642:in `render_div'
+    haml (2.0.9) lib/haml/precompiler.rb:191:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:42:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:42:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 77ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:43:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
