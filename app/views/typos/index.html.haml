@@ -1,15 +1,18 @@
 %h1 iPhone Typos
 
+= link_to 'Add a Typo', new_typo_path
+%hr/
+
 - @typos.each do |typo|
   .typo[typo]
-    .rating 
-      %span Avg. rating:
-      %span.value= typo.average_rating_round 
     .content= simple_format(typo.html)
-    .rate_it 
-      %span Rate it:
+    .rating 
+      %span.label Avg. rating:
+      %span.value= typo.average_rating_round
+      %span.divider= "&nbsp;|&nbsp;"
+      %span.label Rate it:
       - 1.upto(4) do |rating|
         = link_to rating, :action => "rate", :id => typo, :rating => rating
+      
   %hr/
 
-= link_to 'New typo', new_typo_path

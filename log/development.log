@@ -3201,3 +3201,203 @@ Rendering typos/index
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
   [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
 Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:48:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:48:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:48:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.6ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 117ms (View: 83, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:49:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:49:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:49:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:49:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 68ms (View: 10, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:50:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:51:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:51:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:51:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:52:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:52:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 22:52:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
