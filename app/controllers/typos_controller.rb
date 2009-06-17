@@ -2,7 +2,9 @@ class TyposController < ApplicationController
   # GET /typos
   # GET /typos.xml
   def index
-    @typos = Typo.all
+    @typos = Typo.all(:order => 'created_at DESC')
+    @new_typo = Typo.new
+
 
     respond_to do |format|
       format.html # index.html.erb
