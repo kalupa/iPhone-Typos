@@ -4292,3 +4292,135 @@ Rendered typos/_form (1.0ms)
   [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
   [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
 Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:50:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (1.0ms)[0m   [0;1mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (8 spaces were used for indentation. Haml must be indented using two spaces.) on line #23 of app/views/typos/index.html.haml:
+20:     -#     - 1.upto(4) do |rating|
+21:     -#       = link_to rating, :action => "rate", :id => typo, :rating => rating
+22:           
+23:         -# = link_to_remote (rating,  :url => { :action => "rate", :id => typo, :rating => rating })
+24:       
+25:   %hr/
+
+    app/views/typos/index.html.haml:23
+    haml (2.0.9) lib/haml/precompiler.rb:161:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:51:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.0ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: nesting within a tag that already has content is illegal.) on line #23 of app/views/typos/index.html.haml:
+20:     /     - 1.upto(4) do |rating|
+21:     /       = link_to rating, :action => "rate", :id => typo, :rating => rating
+22:           
+23:         -# = link_to_remote (rating,  :url => { :action => "rate", :id => typo, :rating => rating })
+24:       
+25:   %hr/
+
+    app/views/typos/index.html.haml:23
+    haml (2.0.9) lib/haml/precompiler.rb:652:in `render_comment'
+    haml (2.0.9) lib/haml/precompiler.rb:193:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (33.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:51:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.9ms)[0m   [0;1mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Illegal nesting: nesting within a tag that already has content is illegal.) on line #23 of app/views/typos/index.html.haml:
+20:     /     - 1.upto(4) do |rating|
+21:     /       = link_to rating, :action => "rate", :id => typo, :rating => rating
+22:           
+23:         -# = link_to_remote (rating,  :url => { :action => "rate", :id => typo, :rating => rating })
+24:       
+25:   %hr/
+
+    app/views/typos/index.html.haml:23
+    haml (2.0.9) lib/haml/precompiler.rb:652:in `render_comment'
+    haml (2.0.9) lib/haml/precompiler.rb:193:in `process_line'
+    haml (2.0.9) lib/haml/precompiler.rb:156:in `precompile'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `each_with_index'
+    haml (2.0.9) lib/haml/precompiler.rb:122:in `precompile'
+    haml (2.0.9) lib/haml/engine.rb:100:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (86.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:51:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.9ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (2.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 32ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:51:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:51:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (1.1ms)[0m   [0;1mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.3ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/]
