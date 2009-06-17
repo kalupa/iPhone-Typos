@@ -1098,3 +1098,593 @@ Processing TyposController#index (for 127.0.0.1 at 2009-06-16 18:30:51) [GET]
 Rendering template within layouts/typos
 Rendering typos/index
 Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/typos]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTypos (20090612135554)
+Migrating to RenameTyposColumnToHtml (20090612143401)
+Migrating to ActsAsRateableMigration (20090616214558)
+Migrating to CreateUsers (20090617012032)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090617012032')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rates")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("ratings")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_ratings_on_rateable_id_and_rateable_type')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_ratings_on_rate_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("typos")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-16 21:34:52) [GET]
+  [4;36;1mTypo Load (0.7ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Completed in 78ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-16 21:34:55) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:35:09) [GET]
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x2489d68>):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (30.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:36:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x23bde70>):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (85.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:41:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionsController:0x2562320>):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (29.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:42:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Login) on line #1 of app/views/user_sessions/new.html.haml:
+1: %h1= Login
+2: 
+3: - form_for @user_session, :url => user_session_path do |f| 
+4:   .errors= f.error_messages
+
+    app/views/user_sessions/new.html.haml:1:in `_run_haml_app47views47user_sessions47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (95.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:42:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:42:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering user_sessions/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-16 21:43:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/typos
+Rendering user_sessions/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-16 22:02:51) [GET]
+
+ActionController::RoutingError (No route matches "/user/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:03:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+ERROR: compiling _run_haml_app47views47users47_form46html46haml_locals_form_object RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting kEND
+...? ? nil : "Change password" ;
+                              ^
+Function body:           def _run_haml_app47views47users47_form46html46haml_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;haml_temp =  form.label :login;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.text_field :login;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n<br />\n");haml_temp =  form.label :password, form.object.new_record? ? nil : "Change password" ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.password_field :password ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n<br />\n");haml_temp =  form.label :password_confirmation ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.password_field :password_confirmation ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n");@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:12:in `render'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:57:in `non_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:12:in `render'
+/Users/paul/projects/iPhone-Typos/app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:165:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:447:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:447:in `haml_bind_proc'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/helpers/form_helper.rb:490:in `fields_for'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/helpers/form_helper.rb:282:in `form_for_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+/Users/paul/projects/iPhone-Typos/app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:6: syntax error, unexpected tIDENTIFIER, expecting kEND
+...? ? nil : "Change password" ;
+                              ^) on line #6 of app/views/users/_form.html.haml:
+3: = form.text_field :login
+4: %br/
+5: %br/
+6: = form.label :password, form.object.new_record? ? nil : "Change password" 
+7: %br/
+8: = form.password_field :password 
+9: %br/
+
+    app/views/users/_form.html.haml:19:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (107.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:03:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+
+ActionView::TemplateError (undefined method `password ' for #<User:0x25e6b0c>) on line #8 of app/views/users/_form.html.haml:
+5: %br/
+6: = form.label :password, form.object.new_record? ? nil : "Change password"
+7: %br/
+8: = form.password_field :password 
+9: %br/
+10: %br/
+11: = form.label :password_confirmation 
+
+    app/views/users/_form.html.haml:8:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:04:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x23f73f0>) on line #1 of app/views/users/_form.html.haml:
+1: = f.label :login
+2: %br/
+3: = f.text_field :login
+4: %br/
+
+    app/views/users/_form.html.haml:1:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:05:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+
+ActionView::TemplateError (undefined method `password ' for #<User:0x24943f8>) on line #8 of app/views/users/_form.html.haml:
+5: %br/
+6: = form.label (:password, form.object.new_record? ? nil : "Change password")
+7: %br/
+8: = form.password_field :password 
+9: %br/
+10: %br/
+11: = form.label :password_confirmation 
+
+    app/views/users/_form.html.haml:8:in `_run_haml_app47views47users47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (116.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:05:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+ERROR: compiling _run_haml_app47views47users47_form46html46haml_locals_form_object RAISED compile error
+/Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting kEND
+....password_field (:password) ;
+                              ^
+Function body:           def _run_haml_app47views47users47_form46html46haml_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:format=>:xhtml, :attr_wrapper=>"'", :preserve=>["textarea", "pre"], :autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;haml_temp =  form.label :login;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.text_field :login;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n<br />\n");haml_temp =  form.label (:password, form.object.new_record? ? nil : "Change password");
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.password_field (:password) ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n<br />\n");haml_temp =  form.label :password_confirmation ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+_hamlout.push_text("<br />\n");haml_temp =  form.password_field :password_confirmation ;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+
+_hamlout.push_text("<br />\n");@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:19:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:184:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:12:in `render'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:57:in `non_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:12:in `render'
+/Users/paul/projects/iPhone-Typos/app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:165:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:447:in `call'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers.rb:447:in `haml_bind_proc'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/helpers/form_helper.rb:490:in `fields_for'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/helpers/form_helper.rb:282:in `form_for_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+/Users/paul/projects/iPhone-Typos/app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/projects/iPhone-Typos/app/views/users/_form.html.haml:8: syntax error, unexpected tIDENTIFIER, expecting kEND
+....password_field (:password) ;
+                              ^) on line #8 of app/views/users/_form.html.haml:
+5: %br/
+6: = form.label (:password, form.object.new_record? ? nil : "Change password")
+7: %br/
+8: = form.password_field (:password) 
+9: %br/
+10: %br/
+11: = form.label :password_confirmation 
+
+    app/views/users/_form.html.haml:19:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/users/new.html.haml:5:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/users/new.html.haml:3:in `_run_haml_app47views47users47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:05:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Rendered users/_form (1.9ms)
+Completed in 82ms (View: 71, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:05:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Rendered users/_form (2.0ms)
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-06-16 22:05:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-06-16 22:05:59) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"kalupa", "email"=>"paul@controllercode.com"}, "commit"=>"Register", "action"=>"create", "authenticity_token"=>"ZUaI58ThA6WsTG9AJeEhS96JbPUfg1So+fwHYAqqrMM=", "controller"=>"users"}
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'paul@controllercode.com') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'kalupa') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'exhIzqYRYRJPFFd2GsyS') LIMIT 1[0m
+  [4;36;1mUser Create (19.3ms)[0m   [0;1mINSERT INTO "users" ("last_login_at", "last_request_at", "updated_at", "crypted_password", "single_access_token", "perishable_token", "current_login_ip", "password_salt", "current_login_at", "failed_login_count", "persistence_token", "login_count", "login", "email", "last_login_ip", "created_at") VALUES(NULL, '2009-06-17 02:06:00', '2009-06-17 02:06:00', 'edaf30eb81a26168d9f57b684dc852ef05d4b017c0f55472863cee8e25899c6939eb349ffe4da66991e7fbb42dbbf9d703bcad7f4b32e292b221afa7f2d1d314', 'exhIzqYRYRJPFFd2GsyS', 'Hc0hsu3umRDpQy0DfUBo', '127.0.0.1', 'IWppxpdBhZpG96mX1omK', '2009-06-17 02:06:00', 0, '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7', 1, 'kalupa', 'paul@controllercode.com', NULL, '2009-06-17 02:06:00')[0m
+Redirected to http://localhost:3001/account
+Completed in 415ms (DB: 20) | 302 Found [http://localhost/account]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-06-16 22:06:00) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'hewiCGl_bf9Hs_ri_K13', "last_request_at" = '2009-06-17 02:06:00', "updated_at" = '2009-06-17 02:06:00' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 72ms (View: 6, DB: 1) | 200 OK [http://localhost/account]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-06-16 22:06:03) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'nvQ0I2Ruo9PBpYA98Ijc', "last_request_at" = '2009-06-17 02:06:03', "updated_at" = '2009-06-17 02:06:03' WHERE "id" = 1[0m
+Rendering users/edit
+Rendered users/_form (1.4ms)
+Completed in 27ms (View: 6, DB: 1) | 200 OK [http://localhost/account/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-06-16 22:06:05) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '71211e4b78d1cbd90502f7d2353a1253670b1e280a904d37119b40e1c2d0ed8ddcddca90e0bbe97f8f361e54e882106ee434dfa1b0eb35f5ae2a86f1ee69a9b7') LIMIT 1[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE "users" SET "perishable_token" = 'QjCpWggt3esgQhWgiJHU', "last_request_at" = '2009-06-17 02:06:05', "updated_at" = '2009-06-17 02:06:05' WHERE "id" = 1[0m
+Rendering users/show
+Completed in 21ms (View: 1, DB: 1) | 200 OK [http://localhost/account]

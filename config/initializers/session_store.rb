@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_iphonetypos_session',
-  :secret      => '1f50e42adc505c9f5baf0c5463fc1c09dde517b933cd14d93794ec0634d667a8e9f4d9c454e462bd345e11c5b160848e882e0cf3c4ce633bb16d1a6a835c103d'
+  :secret      => 'e7d876ee266220075ada32e3e689c0d880d1b11d1a2f877d4848bfa9fad15b79049ff775c3b898dc6a4a0c5772b70eea75274505f3a20c7b46a4201e600ec61c'
 }
 
 # Use the database for sessions instead of the cookie-based default,

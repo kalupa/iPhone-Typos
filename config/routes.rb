@@ -1,10 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
 	map.resources :typos
 
+	map.resource :user_session
+	
+	map.resource :account, :controller => "users"
+  map.resources :users
+
 	map.rating 'typo/:id/rating/:rating', :controller => "typos", :action => "rate"
 	
 	map.root :controller => "typos"
-	
 
   # The priority is based upon order of creation: first created -> highest priority.
 
