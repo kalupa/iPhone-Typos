@@ -1,0 +1,14 @@
+= f.error_messages
+
+%p
+  = f.label :html, "Typo"
+  %br/
+  = f.text_area :html
+
+%p
+  = f.label :name, "Your Name (optional)"
+  %br/
+  = f.text_field :name
+
+%p
+  = f.submit 'Create'
