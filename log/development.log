@@ -3401,3 +3401,894 @@ Rendering typos/index
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
   [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
 Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 11:49:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 39ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 11:49:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.1ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2009-06-17 11:49:36) [GET]
+  Parameters: {"action"=>"show", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-06-17 11:49:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/typos
+Rendering user_sessions/new
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 11:52:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.4ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 11:52:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:52:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+Rendered typos/_form (2.7ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:52:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+Rendered typos/_form (2.7ms)
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:53:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+
+ActionView::TemplateError (Indenting at the beginning of the document is illegal.) on line #1 of app/views/typos/_form.html.haml:
+1:   = f.error_messages
+2: 
+3:   %p
+4:     = f.label :html, "Typo"
+
+    app/views/typos/_form.html.haml:1
+    haml (2.0.9) lib/haml/engine.rb:89:in `initialize'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `new'
+    haml (2.0.9) rails/./lib/haml/template/plugin.rb:21:in `compile'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/typos/new.html.haml:4:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/typos/new.html.haml:3:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:46:in `new'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (42.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:53:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x2401a6c>) on line #1 of app/views/typos/_form.html.haml:
+1: = f.error_messages
+2: 
+3: %p
+4:   = f.label :html, "Typo"
+
+    app/views/typos/_form.html.haml:1:in `_run_haml_app47views47typos47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/typos/new.html.haml:4:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/typos/new.html.haml:3:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:46:in `new'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:53:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x250eab8>) on line #1 of app/views/typos/_form.html.haml:
+1: = f.error_messages
+2: 
+3: %p
+4:   = f.label :html, "Typo"
+
+    app/views/typos/_form.html.haml:1:in `_run_haml_app47views47typos47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/typos/new.html.haml:4:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/typos/new.html.haml:3:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:46:in `new'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:53:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x226bd38>) on line #1 of app/views/typos/_form.html.haml:
+1: = f.error_messages
+2: 
+3: %p
+4:   = f.label :html, "Typo"
+
+    app/views/typos/_form.html.haml:1:in `_run_haml_app47views47typos47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/typos/new.html.haml:4:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `call'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:165:in `form_for'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `call'
+    haml (2.0.9) lib/haml/helpers.rb:447:in `haml_bind_proc'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:171:in `form_for'
+    app/views/typos/new.html.haml:3:in `_run_haml_app47views47typos47new46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:46:in `new'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:53:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+ERROR: compiling _run_haml_app47views47typos47new46html46haml RAISED compile error
+/Users/paul/Projects/iphonetypos/source/app/views/typos/new.html.haml:4: syntax error, unexpected '{', expecting tASSOC
+haml_temp =  render :partial => 'form', :locals {:f => f};
+                                                 ^
+Function body:           def _run_haml_app47views47typos47new46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :ugly=>false, :preserve=>["textarea", "pre"], :format=>:xhtml, :attr_wrapper=>"'"});_erbout = _hamlout.buffer;__in_erb_template = true;;
+
+_hamlout.push_text("<h1>New Typo</h1>\n"); form_for(@typo) do |f|;
+haml_temp =  render :partial => 'form', :locals {:f => f};
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+end;haml_temp =  link_to 'Back', typos_path;
+haml_temp = _hamlout.push_script(haml_temp, false, false, false, false, false);
+@haml_buffer = @haml_buffer.upper;_erbout;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/paul/Projects/iphonetypos/source/app/views/typos/new.html.haml:11:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/lib/haml/helpers/action_view_mods.rb:14:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/paul/Projects/iphonetypos/source/app/controllers/typos_controller.rb:46:in `new'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.0.9/rails/../lib/sass/plugin/rails.rb:19:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/paul/Projects/iphonetypos/source/app/views/typos/new.html.haml:4: syntax error, unexpected '{', expecting tASSOC
+haml_temp =  render :partial => 'form', :locals {:f => f};
+                                                 ^) on line #4 of app/views/typos/new.html.haml:
+1: %h1 New Typo
+2: 
+3: - form_for(@typo) do |f|
+4:   = render :partial => 'form', :locals {:f => f}
+5: 
+6: = link_to 'Back', typos_path
+
+    app/views/typos/new.html.haml:11:in `compile!'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:46:in `new'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (82.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#new (for 127.0.0.1 at 2009-06-17 11:55:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"typos"}
+Rendering template within layouts/typos
+Rendering typos/new
+Rendered typos/_form (1.7ms)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/typos/new]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 13:32:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 36ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 13:32:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.1ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#create (for 127.0.0.1 at 2009-06-17 13:34:37) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"Ai4b1EMVkuYMN1wPIgjcu/MU2coesnyUC5i0+uQmbuM=", "controller"=>"typos"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.gsub):
+  app/models/cleaner.rb:4:in `append_features'
+  app/controllers/typos_controller.rb:63:in `create'
+  app/controllers/typos_controller.rb:62:in `create'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (71.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 13:40:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.4ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 13:41:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-17 13:41:51) [POST]
+  Parameters: {"rating"=>"4", "action"=>"rate", "authenticity_token"=>"Ai4b1EMVkuYMN1wPIgjcu/MU2coesnyUC5i0+uQmbuM=", "id"=>"1", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.2ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 1) [0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/typos_controller.rb:15:in `rate'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 13:51:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:12:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #4 of app/views/typos/index.html.haml:
+1: %h1 iPhone Typos
+2: 
+3: = link_to 'Add a Typo', new_typo_path
+4: - remote_form_for(@typo) do |f|
+5:   = render :partial => 'form', :object => f
+6: 
+7: %hr/
+
+    app/views/typos/index.html.haml:4:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:7:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.6ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:13:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x25f08f0>) on line #1 of app/views/typos/_form.html.haml:
+1: = f.error_messages
+2: 
+3: %p
+4:   = f.label :html, "Typo"
+
+    app/views/typos/_form.html.haml:1:in `_run_haml_app47views47typos47_form46html46haml_locals_form_object'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    haml (2.0.9) lib/haml/helpers.rb:57:in `non_haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/typos/index.html.haml:5:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:4:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:13:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (2.5ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:13:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.4ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#create (for 127.0.0.1 at 2009-06-17 14:13:30) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"Ai4b1EMVkuYMN1wPIgjcu/MU2coesnyUC5i0+uQmbuM=", "typo"=>{"name"=>"", "html"=>"Tester"}, "controller"=>"typos"}
+  [4;36;1mTypo Create (0.4ms)[0m   [0;1mINSERT INTO "typos" ("html", "name", "updated_at", "created_at") VALUES('Tester', '', '2009-06-17 18:13:30', '2009-06-17 18:13:30')[0m
+Redirected to http://localhost:3000/typos
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:13:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.1ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:13:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.1ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:26:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.6ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.4ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:30:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (3.7ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+Completed in 40ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TyposController#create (for 127.0.0.1 at 2009-06-17 14:30:57) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"Ai4b1EMVkuYMN1wPIgjcu/MU2coesnyUC5i0+uQmbuM=", "typo"=>{"name"=>"", "html"=>"Test"}, "controller"=>"typos"}
+  [4;36;1mTypo Create (0.4ms)[0m   [0;1mINSERT INTO "typos" ("html", "name", "updated_at", "created_at") VALUES('Test', '', '2009-06-17 18:30:57', '2009-06-17 18:30:57')[0m
+Redirected to http://localhost:3000/typos
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:30:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:31:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#create (for 127.0.0.1 at 2009-06-17 14:31:55) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"Ai4b1EMVkuYMN1wPIgjcu/MU2coesnyUC5i0+uQmbuM=", "typo"=>{"name"=>"", "html"=>"terasd"}, "controller"=>"typos"}
+  [4;35;1mTypo Create (0.3ms)[0m   [0mINSERT INTO "typos" ("html", "name", "updated_at", "created_at") VALUES('terasd', '', '2009-06-17 18:31:55', '2009-06-17 18:31:55')[0m
+Redirected to http://localhost:3000/typos
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:31:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-17 14:32:22) [GET]
+  Parameters: {"rating"=>"3", "action"=>"rate", "id"=>"2", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.1ms)[0m   [0;1mSELECT * FROM "typos" WHERE ("typos"."id" = 2) [0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/typos_controller.rb:17:in `rate'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (23.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:32:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.1ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+Completed in 65ms (View: 7, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#rate (for 127.0.0.1 at 2009-06-17 14:33:14) [GET]
+  Parameters: {"rating"=>"3", "action"=>"rate", "id"=>"2", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.2ms)[0m   [0mSELECT * FROM "typos" WHERE ("typos"."id" = 2) [0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/typos_controller.rb:17:in `rate'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (21.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:33:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.5ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+
+ActionView::TemplateError (rating_url failed to generate from {:action=>"rate", :controller=>"typos"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["typo", :id, "rating", :rating] - are they all satisfied?) on line #20 of app/views/typos/index.html.haml:
+17:       %span.divider= "&nbsp;|&nbsp;"
+18:       %span.label Rate it:
+19:       - 1.upto(4) do |rating|
+20:         = link_to rating_path, :action => "rate", :id => typo, :rating => rating
+21:         -# = link_to_remote (rating,  :url => { :action => "rate", :id => typo, :rating => rating })
+22:       
+23:   %hr/
+
+    (eval):20:in `rating_path'
+    app/views/typos/index.html.haml:20:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:19:in `upto'
+    app/views/typos/index.html.haml:19:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:11:in `each'
+    app/views/typos/index.html.haml:11:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:33:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.5ms)[0m   [0mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mRate Load (0.2ms)[0m   [0mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+
+ActionView::TemplateError (rating_url failed to generate from {:action=>"rate", :controller=>"typos"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["typo", :id, "rating", :rating] - are they all satisfied?) on line #20 of app/views/typos/index.html.haml:
+17:       %span.divider= "&nbsp;|&nbsp;"
+18:       %span.label Rate it:
+19:       - 1.upto(4) do |rating|
+20:         = link_to rating_path, :action => "rate", :id => typo, :rating => rating
+21:         -# = link_to_remote (rating,  :url => { :action => "rate", :id => typo, :rating => rating })
+22:       
+23:   %hr/
+
+    (eval):20:in `rating_path'
+    app/views/typos/index.html.haml:20:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:19:in `upto'
+    app/views/typos/index.html.haml:19:in `_run_haml_app47views47typos47index46html46haml'
+    app/views/typos/index.html.haml:11:in `each'
+    app/views/typos/index.html.haml:11:in `_run_haml_app47views47typos47index46html46haml'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    haml (2.0.9) lib/haml/helpers/action_view_mods.rb:14:in `render'
+    app/controllers/typos_controller.rb:9:in `index'
+    haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:33:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.7ms)[0m   [0;1mSELECT * FROM "typos" [0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:34:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;36;1mTypo Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: created_on: SELECT * FROM "typos" ORDER BY created_on DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: created_on: SELECT * FROM "typos"  ORDER BY created_on DESC):
+  app/controllers/typos_controller.rb:5:in `index'
+  haml (2.0.9) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (26.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:34:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.1ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 19ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:35:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.1ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.4ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:35:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:35:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 14ms (View: 9, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:36:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.1ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.2ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:36:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:36:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.0ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:36:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (1.0ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:37:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 62ms (View: 56, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:37:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.9ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.2ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
+
+
+Processing TyposController#index (for 127.0.0.1 at 2009-06-17 14:37:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"typos"}
+  [4;35;1mTypo Load (0.8ms)[0m   [0mSELECT * FROM "typos" ORDER BY created_at DESC[0m
+Rendering template within layouts/typos
+Rendering typos/index
+Rendered typos/_form (1.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 2)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+  [4;36;1mRate Load (0.1ms)[0m   [0;1mSELECT "rates".* FROM "rates" INNER JOIN "ratings" ON "rates".id = "ratings".rate_id WHERE (("ratings".rateable_type = 'Typo') AND ("ratings".rateable_id = 1)) [0m
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/typos]
