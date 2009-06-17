@@ -12,7 +12,7 @@ class TyposController < ApplicationController
 
 	def rate
 		@typo = Typo.find(params[:id])
-		# @typo.rate_it(params[:rating], 0)
+		@typo.rate_it(params[:rating], current_user.id)
 		
 		respond_to do |format|
 			if @typo.save
