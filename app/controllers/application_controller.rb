@@ -4,9 +4,12 @@
 class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
-  
+
+	layout proc{ |c| c.request.xhr? ? false : "typos" }
+	
   private
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
